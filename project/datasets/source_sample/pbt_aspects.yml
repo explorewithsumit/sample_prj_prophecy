@@ -1,0 +1,96 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: activity_date
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Timestamp indicating when the transaction activity occurred, formatted
+        as YYYY-MM-DDTHH:MM:SS.sssZ.
+      mappings: []
+      tags: []
+  - name: lm_offer_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the offer associated with the transaction.
+      mappings: []
+      tags: []
+  - name: transaction_amount
+    type: float
+    nullable: true
+    metadata:
+      description: The total amount of money involved in the transaction, indicating
+        the value of the purchase made by the customer.
+      mappings: []
+      tags: []
+  - name: lm_transaction_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each transaction; This ID helps track individual
+        transactions within the system.
+      mappings: []
+      tags: []
+  - name: transactionjournal_name
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the journal associated with the transaction; Represents
+        the source or context of the transaction.
+      mappings: []
+      tags: []
+  - name: voucher_code
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the promotional voucher used in the transaction.
+      mappings: []
+      tags: []
+  - name: product_sku
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the product; Represents the stock keeping
+        unit associated with the transaction.
+      mappings: []
+      tags: []
+  - name: expiry_date
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Date and time when the offer or voucher expires; Format is in YYYY-MM-DDTHH:MM:SS.
+      mappings: []
+      tags: []
+  - name: points
+    type: integer
+    nullable: true
+    metadata:
+      description: Loyalty points earned from the transaction; Indicates the reward
+        points credited to the customer.
+      mappings: []
+      tags: []
+  - name: customer_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer; Represents the customer associated
+        with the transaction.
+      mappings: []
+      tags: []
+  - name: last_modified_date
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Timestamp indicating the last time the transaction record was updated;
+        Format is YYYY-MM-DDTHH:MM:SS.sssZ.
+      mappings: []
+      tags: []
+  - name: product_name
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the product associated with the transaction.
+      mappings: []
+      tags: []

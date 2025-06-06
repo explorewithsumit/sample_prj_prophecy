@@ -1,0 +1,708 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.10.0",
+        "pyPiVersion" : "1.9.49"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/transaction_pipeline",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "transaction_pipeline",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "28049",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "skrlearnaigmailcomteam.sampleproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "skrlearnaigmailcomteam.firstproject.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "49852",
+      "projectName" : "first_project",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2025-06-06T10:17:59.619494Z",
+        "name" : "plibMaven",
+        "version" : "8.10.0",
+        "id" : "1866005025",
+        "createdAt" : "2025-06-06T10:17:59.619494Z"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2025-06-06T10:17:59.619494Z",
+        "name" : "plibPypi",
+        "version" : "1.9.49",
+        "id" : "1268327814",
+        "createdAt" : "2025-06-06T10:17:59.619494Z"
+      } ]
+    }, {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "transaction_pipeline",
+    "configTopLevelPackage" : "transaction_pipeline",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "7Tpirc-CP7y0m5b90dZKN",
+    "source" : "lq8rFyPbW5blskUBFQB54$$mIeYRYaZmUAcrxsydUJJy",
+    "sourcePort" : "v0DsJYk2nyPJc5XbR97jb$$ZHjzftmGZ3dOk8d3Lvgnx",
+    "target" : "K9OQZSvnfB-8OQHkXcUW7$$lSBvkOHCaTuQ1L4suLM-X",
+    "targetPort" : "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc"
+  }, {
+    "id" : "gvBv3kvvwoTKcn2DLiVJI",
+    "source" : "8A9YCIviW43n03kUAjS64$$d08bBGDldGWwlKKN8RTNH",
+    "sourcePort" : "1R_XuPgyTA-R3iILyvpU-$$QLZaXk3u4pT0dgiKm5Z41",
+    "target" : "lq8rFyPbW5blskUBFQB54$$mIeYRYaZmUAcrxsydUJJy",
+    "targetPort" : "sbYyE9D4zP4l_P6Y2mTAn$$HgOk2Ryc3f-3GGaZbGQQO"
+  }, {
+    "id" : "-JRl_caQt3Q6WI1nuqWFp$$2RiXa1w17MkGE4Fsk_Zhi",
+    "source" : "K9OQZSvnfB-8OQHkXcUW7$$lSBvkOHCaTuQ1L4suLM-X",
+    "sourcePort" : "QFd9nEQG5nEDJg85NxTqk$$DSJwNKMeM_4YxLAKUYwJl",
+    "target" : "yJkeWNqxqqIE4PKgURJPt$$sFtJSnr-1UnUlsCpJoS8V",
+    "targetPort" : "RFIfF01NHhLyjQPh_xbVi$$SSIeDCih3bbNEIF9CswFP"
+  } ],
+  "processes" : {
+    "K9OQZSvnfB-8OQHkXcUW7$$lSBvkOHCaTuQ1L4suLM-X" : {
+      "id" : "K9OQZSvnfB-8OQHkXcUW7$$lSBvkOHCaTuQ1L4suLM-X",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "required_columns",
+        "slug" : "required_columns",
+        "x" : -180,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc",
+          "slug" : "rename_schema_columns",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "activity_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the transaction activity occurred, formatted as YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "offer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the offer associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_amount",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total amount of money involved in the transaction, indicating the value of the purchase made by the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction; This ID helps track individual transactions within the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "journal_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the journal associated with the transaction; Represents the source or context of the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "voucher_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the promotional voucher used in the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_sku",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the product; Represents the stock keeping unit associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "expiry_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date and time when the offer or voucher expires; Format is in YYYY-MM-DDTHH:MM:SS.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "points",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Loyalty points earned from the transaction; Indicates the reward points credited to the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each customer; Represents the customer associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_modified_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the transaction record was updated; Format is YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the product associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "QFd9nEQG5nEDJg85NxTqk$$DSJwNKMeM_4YxLAKUYwJl",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "loyaltyTransactionID",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "(monotonically_increasing_id() + 1)"
+          },
+          "description" : ""
+        }, {
+          "target" : "activity_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "activity_date"
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_amount"
+          },
+          "description" : ""
+        }, {
+          "target" : "expiry_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "expiry_date AS ledgerPointsExpiryTimestamp"
+          },
+          "description" : ""
+        }, {
+          "target" : "points",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "points AS ledgerPoints"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_modified_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "last_modified_date AS transactionTimestamp"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##points", "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##activity_date", "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##last_modified_date", "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##transaction_id", "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##expiry_date", "smKefBK0PZ-GX_ljjk0fj$$BFnAEx0GtlsveJqDFU_Sc##transaction_amount" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.46&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "8A9YCIviW43n03kUAjS64$$d08bBGDldGWwlKKN8RTNH" : {
+      "id" : "8A9YCIviW43n03kUAjS64$$d08bBGDldGWwlKKN8RTNH",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_sample",
+        "slug" : "source_sample",
+        "x" : -600,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "1R_XuPgyTA-R3iILyvpU-$$QLZaXk3u4pT0dgiKm5Z41",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_sample"
+      }
+    },
+    "lq8rFyPbW5blskUBFQB54$$mIeYRYaZmUAcrxsydUJJy" : {
+      "id" : "lq8rFyPbW5blskUBFQB54$$mIeYRYaZmUAcrxsydUJJy",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "transfromation",
+        "slug" : "transfromation",
+        "x" : -380,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sbYyE9D4zP4l_P6Y2mTAn$$HgOk2Ryc3f-3GGaZbGQQO",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "activity_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the transaction activity occurred, formatted as YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lm_offer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the offer associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_amount",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total amount of money involved in the transaction, indicating the value of the purchase made by the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lm_transaction_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction; This ID helps track individual transactions within the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transactionjournal_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the journal associated with the transaction; Represents the source or context of the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "voucher_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the promotional voucher used in the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_sku",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the product; Represents the stock keeping unit associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "expiry_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date and time when the offer or voucher expires; Format is in YYYY-MM-DDTHH:MM:SS.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "points",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Loyalty points earned from the transaction; Indicates the reward points credited to the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each customer; Represents the customer associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_modified_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the transaction record was updated; Format is YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the product associated with the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "v0DsJYk2nyPJc5XbR97jb$$ZHjzftmGZ3dOk8d3Lvgnx",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "sql",
+        "importString" : "",
+        "transformations" : [ {
+          "AddRule" : {
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            },
+            "param_errors" : [ ]
+          },
+          "MissingColumn" : {
+            "sourceColumn" : "",
+            "defaultValue" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "RenameColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "lm_offer_id",
+            "targetColumn" : "offer_id"
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "AddRule" : {
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            },
+            "param_errors" : [ ]
+          },
+          "MissingColumn" : {
+            "sourceColumn" : "",
+            "defaultValue" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "RenameColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "lm_transaction_id",
+            "targetColumn" : "transaction_id"
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "AddRule" : {
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            },
+            "param_errors" : [ ]
+          },
+          "MissingColumn" : {
+            "sourceColumn" : "",
+            "defaultValue" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "RenameColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "transactionjournal_name",
+            "targetColumn" : "journal_name"
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        } ],
+        "activeTab" : "transformations",
+        "columnsSelector" : [ "sbYyE9D4zP4l_P6Y2mTAn$$HgOk2Ryc3f-3GGaZbGQQO##transactionjournal_name", "sbYyE9D4zP4l_P6Y2mTAn$$HgOk2Ryc3f-3GGaZbGQQO##lm_transaction_id", "sbYyE9D4zP4l_P6Y2mTAn$$HgOk2Ryc3f-3GGaZbGQQO##lm_offer_id" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.46&projectSubscriptionProjectId=12654&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "yJkeWNqxqqIE4PKgURJPt$$sFtJSnr-1UnUlsCpJoS8V" : {
+      "id" : "yJkeWNqxqqIE4PKgURJPt$$sFtJSnr-1UnUlsCpJoS8V",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "transaction_data",
+        "slug" : "transaction_data",
+        "x" : 20,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RFIfF01NHhLyjQPh_xbVi$$SSIeDCih3bbNEIF9CswFP",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "loyaltyTransactionID",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "activity_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the transaction activity occurred, formatted as YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction; This ID helps track individual transactions within the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_amount",
+              "type" : "float",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total amount of money involved in the transaction, indicating the value of the purchase made by the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "expiry_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date and time when the offer or voucher expires; Format is in YYYY-MM-DDTHH:MM:SS.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "points",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Loyalty points earned from the transaction; Indicates the reward points credited to the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_modified_date",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the transaction record was updated; Format is YYYY-MM-DDTHH:MM:SS.sssZ.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/transaction_data"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
